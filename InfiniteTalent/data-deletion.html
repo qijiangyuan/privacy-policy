@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request deletion of data associated with Infinite Talent: Tower RPG by jcgame.">
+  <meta name="robots" content="index, follow">
+  <title>Data Deletion Request | Infinite Talent: Tower RPG</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --deep-sea: #123c4a;
+      --ocean: #1d6474;
+      --foam: #edf7f7;
+      --sand: #f5efe2;
+      --paper: #fffefb;
+      --ink: #19313a;
+      --muted: #60747a;
+      --line: #d6e2e2;
+      --link: #0b6078;
+      --soft: #e9f4f4;
+      --shadow: 0 18px 50px rgba(18, 60, 74, .11);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, var(--foam) 0, #f7faf8 34rem, var(--sand) 100%);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Noto Sans", "Noto Sans SC", sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    a { color: var(--link); text-underline-offset: 3px; }
+    a:hover { color: var(--deep-sea); }
+    a:focus-visible { outline: 3px solid rgba(29, 100, 116, .3); outline-offset: 3px; }
+
+    .site-header {
+      position: relative;
+      overflow: hidden;
+      padding: 60px 20px 70px;
+      background:
+        radial-gradient(circle at 82% 14%, rgba(255, 255, 255, .14), transparent 24%),
+        linear-gradient(135deg, var(--deep-sea), var(--ocean));
+      color: #fff;
+    }
+
+    .site-header::after {
+      content: "";
+      position: absolute;
+      right: -7%;
+      bottom: -74px;
+      left: -7%;
+      height: 120px;
+      border-radius: 50% 50% 0 0;
+      background: var(--foam);
+      opacity: .16;
+    }
+
+    .header-inner, main, footer {
+      width: min(920px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #bde2e6;
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { line-height: 1.28; text-wrap: balance; }
+    h1 { max-width: 760px; margin: 0; font-size: clamp(2rem, 6vw, 3.25rem); letter-spacing: -.035em; }
+    h2 { margin: 2.5rem 0 .8rem; color: var(--deep-sea); font-size: 1.38rem; }
+    h3 { margin: 1.5rem 0 .55rem; color: var(--deep-sea); font-size: 1.06rem; }
+    p, ol, ul { margin: .8rem 0; }
+    ol, ul { padding-left: 1.4rem; }
+    li + li { margin-top: .45rem; }
+
+    .updated { margin: 14px 0 0; color: #d6eef0; }
+
+    .language-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .language-nav a {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, .42);
+      border-radius: 999px;
+      color: #fff;
+      font-size: .92rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .language-nav a:hover { border-color: #fff; background: rgba(255, 255, 255, .1); }
+
+    main {
+      position: relative;
+      z-index: 1;
+      margin-top: -30px;
+      margin-bottom: 30px;
+      padding: clamp(24px, 5vw, 52px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .notice {
+      margin: 1.5rem 0 1.8rem;
+      padding: 18px 20px;
+      border-left: 4px solid var(--ocean);
+      border-radius: 0 8px 8px 0;
+      background: var(--soft);
+      color: #274852;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 1.4rem 0 2rem;
+    }
+
+    .step {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fbfdfc;
+    }
+
+    .step-number {
+      display: inline-grid;
+      width: 30px;
+      height: 30px;
+      margin-bottom: 8px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--ocean);
+      color: #fff;
+      font-size: .86rem;
+      font-weight: 750;
+    }
+
+    .step h3 { margin-top: .2rem; }
+
+    .button {
+      display: inline-block;
+      margin: .7rem 0;
+      padding: 11px 17px;
+      border-radius: 8px;
+      background: var(--ocean);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button:hover { background: var(--deep-sea); color: #fff; }
+
+    .details {
+      margin: 1rem 0;
+      padding: 18px 21px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #f8fbfa;
+    }
+
+    .translation {
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid var(--line);
+    }
+
+    .translation-label {
+      display: inline-block;
+      margin: 0 0 .5rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #e4f1f1;
+      color: var(--deep-sea);
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      padding: 2px 0 44px;
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    footer a { margin-left: 14px; }
+
+    @media (max-width: 700px) {
+      .site-header { padding: 44px 20px 58px; }
+      .header-inner, main, footer { width: min(100% - 28px, 920px); }
+      main { margin-top: -22px; padding: 26px 21px; border-radius: 14px; }
+      .steps { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .site-header { padding: 24px 0; background: #fff; color: #000; }
+      .eyebrow, .updated { color: #333; }
+      .language-nav, .site-header::after, footer, .button { display: none; }
+      main { width: 100%; margin: 0; padding: 0; border: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">jcgame · Infinite Talent: Tower RPG</p>
+      <h1>Data Deletion Request</h1>
+      <p class="updated">Effective and last updated: July 24, 2026</p>
+      <nav class="language-nav" aria-label="Language selection">
+        <a href="#english" lang="en">English</a>
+        <a href="#chinese" lang="zh-CN">简体中文</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article id="english" lang="en" aria-labelledby="english-title">
+      <h2 id="english-title">Delete your Infinite Talent: Tower RPG data</h2>
+      <p>
+        This page explains how users of <strong>Infinite Talent: Tower RPG</strong>
+        (package name <strong>com.jcgame.tianfurpg.global</strong>) can delete locally
+        stored game data or request deletion of other data associated with the Game.
+        The Game is provided by <strong>jcgame</strong>.
+      </p>
+
+      <div class="notice">
+        The Game does not create a jcgame account and does not upload your saved game
+        progress to a jcgame cloud server. You can still request deletion of data that
+        may be processed in connection with advertising, purchases, or support.
+      </div>
+
+      <div class="steps" aria-label="Data deletion options">
+        <section class="step">
+          <span class="step-number" aria-hidden="true">1</span>
+          <h3>Delete local game data</h3>
+          <ol>
+            <li>Open Android <strong>Settings</strong>.</li>
+            <li>Select <strong>Apps</strong>, then <strong>Infinite Talent: Tower RPG</strong>.</li>
+            <li>Select <strong>Storage &amp; cache</strong>.</li>
+            <li>Tap <strong>Clear storage</strong> or <strong>Clear data</strong>.</li>
+          </ol>
+          <p>You can also delete local game data by uninstalling the Game.</p>
+        </section>
+
+        <section class="step">
+          <span class="step-number" aria-hidden="true">2</span>
+          <h3>Send a deletion request</h3>
+          <p>
+            Email us with the subject <strong>Data Deletion Request – Infinite Talent:
+            Tower RPG</strong>. State that you use Android and describe the data you
+            want deleted.
+          </p>
+          <a class="button" href="mailto:qijiangyuan@gmail.com?subject=Data%20Deletion%20Request%20-%20Infinite%20Talent%3A%20Tower%20RPG">Email a deletion request</a>
+          <p><a href="mailto:qijiangyuan@gmail.com">qijiangyuan@gmail.com</a></p>
+        </section>
+      </div>
+
+      <h2>Information to include</h2>
+      <ul>
+        <li>The Game name: Infinite Talent: Tower RPG;</li>
+        <li>Your platform: Android;</li>
+        <li>The type of request, such as deleting advertising-related or purchase-related data;</li>
+        <li>A device or advertising identifier only if we later ask for it to locate relevant records.</li>
+      </ul>
+      <p>
+        Do not email us your password, full payment-card number, bank information, or
+        identity documents. We may need to verify that a request relates to you before
+        acting on it. We normally respond within 30 days, or within the period required
+        by applicable law.
+      </p>
+
+      <h2>Data deleted and data retained</h2>
+      <div class="details">
+        <h3>Data deleted</h3>
+        <ul>
+          <li>Clearing app data or uninstalling deletes locally stored progress, settings, cached subscription-entitlement status, and local ad-frequency counters from that device.</li>
+          <li>Following a verified request, we will delete or anonymize personal information under our control that is not required to be retained.</li>
+          <li>Where applicable, we will help direct the request to a relevant service provider or explain how to use that provider’s deletion controls.</li>
+        </ul>
+
+        <h3>Data that may be retained</h3>
+        <ul>
+          <li>The Game has no jcgame account or server-side cloud save to delete.</li>
+          <li>Google Play and Unity may retain data under their own policies, including transaction records required for accounting, fraud prevention, security, dispute resolution, or legal compliance.</li>
+          <li>We may retain deletion-request correspondence for up to 90 days after closing the request to document its completion, unless a longer period is required by law or for a legal claim.</li>
+          <li>Aggregated or anonymized information that can no longer identify you may be retained.</li>
+        </ul>
+      </div>
+
+      <h2>Subscriptions and third-party data</h2>
+      <p>
+        Deleting game data does <strong>not</strong> cancel an active Google Play
+        subscription. Manage or cancel subscriptions separately in Google Play before
+        deleting data. Payment and transaction data controlled by Google must be managed
+        through your Google account or Google support.
+      </p>
+      <ul>
+        <li><a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">Manage Google Play subscriptions</a></li>
+        <li><a href="https://myactivity.google.com/" target="_blank" rel="noopener noreferrer">Manage Google account activity</a></li>
+        <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener noreferrer">Unity game-player privacy controls</a></li>
+      </ul>
+      <p>
+        Within a Unity advertisement, you may also open the <strong>Data Privacy</strong>
+        icon to view available privacy options and request deletion of historical Unity
+        Ads data associated with that app and device.
+      </p>
+    </article>
+
+    <article id="chinese" class="translation" lang="zh-CN" aria-labelledby="chinese-title">
+      <p class="translation-label">简体中文</p>
+      <h2 id="chinese-title">删除《Infinite Talent: Tower RPG》相关数据</h2>
+      <p><strong>生效及最近更新日期：2026 年 7 月 24 日</strong></p>
+      <p>
+        本页面说明 <strong>Infinite Talent: Tower RPG</strong>（软件包名称：
+        <strong>com.jcgame.tianfurpg.global</strong>）用户如何删除本地游戏数据，
+        或请求删除与本游戏有关的其他数据。本游戏由 <strong>jcgame</strong> 提供。
+      </p>
+
+      <div class="notice">
+        本游戏不会创建 jcgame 账号，也不会将您的游戏存档上传至 jcgame 云服务器。
+        您仍可以请求删除因广告、购买或客户支持而处理的数据。
+      </div>
+
+      <div class="steps" aria-label="数据删除方式">
+        <section class="step">
+          <span class="step-number" aria-hidden="true">1</span>
+          <h3>删除本地游戏数据</h3>
+          <ol>
+            <li>打开 Android <strong>设置</strong>；</li>
+            <li>选择<strong>应用</strong>，然后选择 <strong>Infinite Talent: Tower RPG</strong>；</li>
+            <li>选择<strong>存储和缓存</strong>；</li>
+            <li>点击<strong>清除存储空间</strong>或<strong>清除数据</strong>。</li>
+          </ol>
+          <p>卸载本游戏也会删除本地游戏数据。</p>
+        </section>
+
+        <section class="step">
+          <span class="step-number" aria-hidden="true">2</span>
+          <h3>发送删除请求</h3>
+          <p>
+            请以 <strong>Data Deletion Request – Infinite Talent: Tower RPG</strong>
+            为主题向我们发送电子邮件，说明您使用 Android，并描述希望删除的数据。
+          </p>
+          <a class="button" href="mailto:qijiangyuan@gmail.com?subject=Data%20Deletion%20Request%20-%20Infinite%20Talent%3A%20Tower%20RPG">发送删除请求邮件</a>
+          <p><a href="mailto:qijiangyuan@gmail.com">qijiangyuan@gmail.com</a></p>
+        </section>
+      </div>
+
+      <h2>邮件中需要提供的信息</h2>
+      <ul>
+        <li>游戏名称：Infinite Talent: Tower RPG；</li>
+        <li>使用平台：Android；</li>
+        <li>请求类型，例如删除广告相关或购买相关数据；</li>
+        <li>仅在我们随后要求用于查找相关记录时，提供设备或广告标识符。</li>
+      </ul>
+      <p>
+        请勿通过邮件发送密码、完整支付卡号、银行信息或身份证件。处理请求前，我们可能
+        需要核实该请求确实与您有关。我们通常会在 30 天内或适用法律规定的期限内回复。
+      </p>
+
+      <h2>删除和保留的数据</h2>
+      <div class="details">
+        <h3>将删除的数据</h3>
+        <ul>
+          <li>清除应用数据或卸载本游戏，会从该设备删除本地游戏进度、设置、缓存的订阅权益状态以及本地广告频率计数；</li>
+          <li>收到并核实请求后，我们会删除或匿名化由我们控制且无须继续保留的个人信息；</li>
+          <li>在适用情况下，我们会协助将请求转交给相关服务商，或说明如何使用该服务商的删除功能。</li>
+        </ul>
+
+        <h3>可能保留的数据</h3>
+        <ul>
+          <li>本游戏没有需要删除的 jcgame 账号或服务器端云存档；</li>
+          <li>Google Play 和 Unity 可能按照各自政策保留数据，包括会计、防止欺诈、安全、争议解决或遵守法律所需的交易记录；</li>
+          <li>请求关闭后，我们可能将删除请求往来记录保留最多 90 天，以记录请求已完成；法律或法律主张要求更长时间的除外；</li>
+          <li>无法再识别您身份的汇总或匿名化信息可能会继续保留。</li>
+        </ul>
+      </div>
+
+      <h2>订阅及第三方数据</h2>
+      <p>
+        删除游戏数据<strong>不会</strong>取消有效的 Google Play 订阅。请在删除数据前，
+        另行前往 Google Play 管理或取消订阅。由 Google 控制的付款和交易数据必须通过
+        您的 Google 账号或 Google 支持进行管理。
+      </p>
+      <ul>
+        <li><a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">管理 Google Play 订阅</a></li>
+        <li><a href="https://myactivity.google.com/" target="_blank" rel="noopener noreferrer">管理 Google 账号活动</a></li>
+        <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener noreferrer">Unity 游戏用户隐私控制</a></li>
+      </ul>
+      <p>
+        在 Unity 广告中，您还可以打开 <strong>Data Privacy</strong>（数据隐私）图标，
+        查看可用的隐私选项，并请求删除与该应用及设备关联的历史 Unity Ads 数据。
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <span>© 2026 jcgame · Infinite Talent: Tower RPG</span>
+    <a href="index.html">Privacy Policy</a>
+    <a href="#top">Back to top</a>
+  </footer>
+</body>
+</html>

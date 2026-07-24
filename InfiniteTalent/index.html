@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Infinite Talent: Tower RPG by jcgame.">
+  <meta name="robots" content="index, follow">
+  <title>Privacy Policy | Infinite Talent: Tower RPG</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --deep-sea: #123c4a;
+      --ocean: #1d6474;
+      --foam: #edf7f7;
+      --sand: #f5efe2;
+      --paper: #fffefb;
+      --ink: #19313a;
+      --muted: #60747a;
+      --line: #d6e2e2;
+      --link: #0b6078;
+      --shadow: 0 18px 50px rgba(18, 60, 74, .11);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(180deg, var(--foam) 0, #f7faf8 34rem, var(--sand) 100%);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Noto Sans", "Noto Sans SC", sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    a {
+      color: var(--link);
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--deep-sea); }
+
+    a:focus-visible {
+      outline: 3px solid rgba(29, 100, 116, .3);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    .site-header {
+      position: relative;
+      overflow: hidden;
+      padding: 64px 20px 72px;
+      background:
+        radial-gradient(circle at 82% 14%, rgba(255, 255, 255, .14), transparent 24%),
+        linear-gradient(135deg, var(--deep-sea), var(--ocean));
+      color: #fff;
+    }
+
+    .site-header::after {
+      content: "";
+      position: absolute;
+      right: -7%;
+      bottom: -74px;
+      left: -7%;
+      height: 120px;
+      border-radius: 50% 50% 0 0;
+      background: var(--foam);
+      opacity: .16;
+    }
+
+    .header-inner,
+    main,
+    footer {
+      width: min(920px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #bde2e6;
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.28;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.35rem);
+      letter-spacing: -.035em;
+    }
+
+    h2 {
+      margin: 2.6rem 0 .8rem;
+      color: var(--deep-sea);
+      font-size: 1.35rem;
+    }
+
+    h3 {
+      margin: 1.6rem 0 .55rem;
+      color: var(--deep-sea);
+      font-size: 1.05rem;
+    }
+
+    p,
+    ul { margin: .8rem 0; }
+
+    ul { padding-left: 1.35rem; }
+    li + li { margin-top: .42rem; }
+
+    .updated {
+      margin: 14px 0 0;
+      color: #d6eef0;
+    }
+
+    .language-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .language-nav a {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, .42);
+      border-radius: 999px;
+      color: #fff;
+      font-size: .92rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .language-nav a:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, .1);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      margin-top: -30px;
+      margin-bottom: 30px;
+      padding: clamp(24px, 5vw, 52px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .notice {
+      margin: 1.5rem 0 1.8rem;
+      padding: 17px 19px;
+      border-left: 4px solid var(--ocean);
+      border-radius: 0 8px 8px 0;
+      background: #e9f4f4;
+      color: #274852;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 1.6rem 0 2rem;
+    }
+
+    .summary-item {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fbfdfc;
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--deep-sea);
+      font-size: .9rem;
+    }
+
+    .summary-item span {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .service-list {
+      margin: 1rem 0;
+      padding: 18px 21px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #f8fbfa;
+    }
+
+    .translation {
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid var(--line);
+    }
+
+    .translation-label {
+      display: inline-block;
+      margin: 0 0 .5rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #e4f1f1;
+      color: var(--deep-sea);
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      padding: 2px 0 44px;
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-left: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .site-header { padding: 44px 20px 58px; }
+      .header-inner, main, footer { width: min(100% - 28px, 920px); }
+      main { margin-top: -22px; padding: 26px 21px; border-radius: 14px; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .summary-item { padding: 14px 15px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .site-header { padding: 24px 0; background: #fff; color: #000; }
+      .eyebrow, .updated { color: #333; }
+      .language-nav, .site-header::after, footer { display: none; }
+      main { width: 100%; margin: 0; padding: 0; border: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">jcgame · Infinite Talent: Tower RPG</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Effective and last updated: July 24, 2026</p>
+      <nav class="language-nav" aria-label="Language selection">
+        <a href="#english" lang="en">English</a>
+        <a href="#chinese" lang="zh-CN">简体中文</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article id="english" lang="en" aria-labelledby="english-title">
+      <h2 id="english-title">Privacy Policy for Infinite Talent: Tower RPG</h2>
+      <p>
+        This Privacy Policy applies to <strong>Infinite Talent: Tower RPG</strong>
+        (package name <strong>com.jcgame.tianfurpg.global</strong>), referred to as the
+        “Game,” and is provided by <strong>jcgame</strong> (“we,” “us,” or “our”). It
+        explains what information is processed when you use the Game, why it is used,
+        and the choices available to you.
+      </p>
+
+      <div class="notice">
+        The Game does not require an account and does not ask you to provide your name,
+        postal address, phone number, or email address to play. Game progress and
+        settings are stored locally on your device.
+      </div>
+
+      <div class="summary-grid" aria-label="Privacy summary">
+        <div class="summary-item">
+          <strong>No game account</strong>
+          <span>No registration or profile is required.</span>
+        </div>
+        <div class="summary-item">
+          <strong>Local game saves</strong>
+          <span>Progress is kept on your device, not on our servers.</span>
+        </div>
+        <div class="summary-item">
+          <strong>Ads and purchases</strong>
+          <span>Third-party services process limited data to provide these features.</span>
+        </div>
+      </div>
+
+      <h2>1. Information We Process</h2>
+      <h3>Information stored locally</h3>
+      <p>
+        The Game stores game progress, preferences, subscription-entitlement status,
+        and ad-frequency information on your device. We do not operate a
+        server that receives your saved game progress.
+      </p>
+
+      <h3>Advertising information</h3>
+      <p>
+        The Game uses Unity LevelPlay mediation and Unity Ads to provide rewarded,
+        interstitial, and banner advertisements. These providers may collect or receive:
+      </p>
+      <ul>
+        <li>Approximate location inferred from your IP address;</li>
+        <li>Device or other identifiers, including an advertising identifier where available;</li>
+        <li>Ad interactions, such as ad requests, impressions, clicks, and rewarded-ad completion;</li>
+        <li>Technical and diagnostic information, such as device type, operating system, app version, language, network information, and errors.</li>
+      </ul>
+
+      <h3>Purchases and subscriptions</h3>
+      <p>
+        If you buy a subscription, Google Play processes the payment. The Game receives
+        product, transaction, purchase-state, and entitlement information needed to
+        complete the purchase, restore it, and provide subscription benefits. We do not
+        receive or store your full payment-card or bank-account details.
+      </p>
+      <p>
+        Unity In-App Purchasing may also process the email address associated with the
+        store transaction, user and purchase identifiers, purchase history, approximate
+        location, and technical information such as crash logs, diagnostics, performance
+        data, and device identifiers for app functionality and analytics.
+      </p>
+
+      <h3>Information we do not request</h3>
+      <p>
+        The Game does not request precise location, contacts, photos, videos, audio
+        recordings, camera access, microphone access, health information, or files and
+        documents from your device for gameplay.
+      </p>
+
+      <h2>2. How and Why Information Is Used</h2>
+      <ul>
+        <li>To operate the Game, save your progress locally, and remember your preferences;</li>
+        <li>To load, display, measure, and limit the frequency of advertisements;</li>
+        <li>To process subscriptions, confirm entitlements, and restore purchases;</li>
+        <li>To diagnose errors, maintain reliability, secure the services, and prevent fraud or abuse;</li>
+        <li>To comply with legal obligations and enforce applicable terms.</li>
+      </ul>
+      <p>
+        Where applicable law requires a legal basis, processing may be based on your
+        consent (for example, certain personalized advertising), performance of a
+        contract, compliance with law, or legitimate interests such as service security,
+        fraud prevention, and reliability. You may withdraw consent through available
+        consent controls without affecting processing that occurred before withdrawal.
+      </p>
+
+      <h2>3. Third-Party Services and Sharing</h2>
+      <p>
+        Data may be transmitted directly from your device to the providers below. They
+        process information under their own terms and privacy policies. The particular
+        provider used may depend on your platform, region, device, and ad availability.
+      </p>
+      <div class="service-list">
+        <ul>
+          <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener noreferrer">Unity LevelPlay and Unity Ads privacy policy</a></li>
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google privacy policy (Google Play and Google Play Billing)</a></li>
+        </ul>
+      </div>
+      <p>
+        We do not sell your personal information for money. Advertising providers may
+        process or share identifiers and ad-interaction information for advertising,
+        measurement, fraud prevention, security, and compliance. Some privacy laws may
+        define certain personalized-advertising disclosures as “sharing” or “targeted
+        advertising.” You can use the choices described below where applicable.
+      </p>
+      <p>
+        We may also disclose information if required by law, to protect users and the
+        Game, or as part of a business transfer where legally permitted and subject to
+        appropriate notice.
+      </p>
+
+      <h2>4. Your Privacy Choices and Rights</h2>
+      <ul>
+        <li>You can manage ad-personalization and reset or delete the advertising identifier through your Android privacy or ads settings.</li>
+        <li>You can use any privacy or consent controls presented by the Game or its advertising providers.</li>
+        <li>You can manage or cancel subscriptions in Google Play.</li>
+        <li>You can delete locally stored game progress by clearing the Game’s app data or uninstalling the Game.</li>
+        <li>You can follow our <a href="data-deletion.html">Data Deletion Request</a> instructions to request deletion of other data.</li>
+      </ul>
+      <p>
+        Depending on where you live, you may have rights to access, correct, delete, or
+        restrict personal information, object to or opt out of certain processing, and
+        withdraw consent. Contact us to make a request. Because the Game does not use a
+        jcgame account or cloud save, we may not be able to identify data held by an
+        advertising or store provider; requests concerning that data may need to be made
+        directly to the relevant provider.
+      </p>
+
+      <h2>5. Retention and Deletion</h2>
+      <p>
+        Local game data remains on your device until you clear the Game’s app data or
+        uninstall it. We retain any information we receive only for as long as reasonably
+        necessary for the purposes described in this Policy, including legal, accounting,
+        security, and fraud-prevention needs. Third-party providers retain and delete data
+        according to their own policies. You may contact us to request deletion of any
+        personal information that we control, subject to applicable legal exceptions.
+      </p>
+
+      <h2>6. Security and International Processing</h2>
+      <p>
+        We and our service providers use reasonable technical and organizational measures
+        designed to protect information, including encrypted transmission where supported.
+        No method of electronic transmission or storage is completely secure. Service
+        providers may process information in countries other than the country where you
+        live, subject to safeguards required by applicable law.
+      </p>
+
+      <h2>7. Children’s Privacy</h2>
+      <p>
+        The Game is not directed to children under 13, or under the minimum age required
+        in their country to consent to personal-data processing. We do not knowingly ask
+        children for personal information. If you believe that a child has provided
+        personal information in connection with the Game, contact us so that we can take
+        appropriate action. If the Game is offered to children in a particular region, we
+        will apply the consent, advertising, and other protections required there.
+      </p>
+
+      <h2>8. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy when the Game, its service providers, or legal
+        requirements change. We will post the revised Policy here and update the date at
+        the top of the page. Material changes will be communicated through the Game or
+        another appropriate method where required by law.
+      </p>
+
+      <h2>9. Contact Us</h2>
+      <p>
+        For privacy questions or requests, email
+        <a href="mailto:qijiangyuan@gmail.com">qijiangyuan@gmail.com</a>.
+      </p>
+    </article>
+
+    <article id="chinese" class="translation" lang="zh-CN" aria-labelledby="chinese-title">
+      <p class="translation-label">简体中文</p>
+      <h2 id="chinese-title">《Infinite Talent: Tower RPG》隐私政策</h2>
+      <p><strong>生效及最近更新日期：2026 年 7 月 24 日</strong></p>
+      <p>
+        本隐私政策适用于 <strong>Infinite Talent: Tower RPG</strong>（软件包名称：
+        <strong>com.jcgame.tianfurpg.global</strong>，以下简称“本游戏”），由
+        <strong>jcgame</strong>（以下简称“我们”）提供。本政策说明您使用本游戏时
+        可能处理哪些信息、处理原因以及您可以行使的选择。
+      </p>
+
+      <div class="notice">
+        本游戏无需创建账号，也不会要求您提供姓名、邮寄地址、电话号码或电子邮箱
+        才能游玩。游戏进度及设置保存在您的设备本地。
+      </div>
+
+      <h2>1. 我们处理的信息</h2>
+      <h3>保存在本地的信息</h3>
+      <p>
+        本游戏会在您的设备上保存游戏进度、偏好设置、订阅权益状态以及广告频率
+        信息。我们没有用于接收您游戏存档进度的服务器。
+      </p>
+
+      <h3>广告相关信息</h3>
+      <p>
+        本游戏使用 Unity LevelPlay 聚合及 Unity Ads 提供激励广告、插屏广告和横幅广告。这些服务商可能
+        收集或接收：
+      </p>
+      <ul>
+        <li>根据 IP 地址推断的大致位置；</li>
+        <li>设备或其他标识符，包括可用时的广告标识符；</li>
+        <li>广告请求、展示、点击及激励广告完成情况等广告互动信息；</li>
+        <li>设备类型、操作系统、应用版本、语言、网络信息及错误等技术和诊断信息。</li>
+      </ul>
+
+      <h3>购买和订阅</h3>
+      <p>
+        当您购买订阅时，付款由 Google Play 处理。本游戏会收到完成购买、恢复购买及
+        提供订阅权益所需的商品、交易、购买状态及权益信息。我们不会收到或保存您的
+        完整支付卡或银行账户信息。
+      </p>
+      <p>
+        Unity 应用内购服务还可能为应用功能和分析目的处理与商店交易关联的电子邮箱、
+        用户及购买标识符、购买记录、大致位置，以及崩溃日志、诊断信息、性能数据和
+        设备标识符等技术信息。
+      </p>
+
+      <h3>我们不会请求的信息</h3>
+      <p>
+        本游戏不会为游戏功能请求精确位置、联系人、照片、视频、录音、相机、麦克风、
+        健康信息或设备中的文件和文档。
+      </p>
+
+      <h2>2. 信息的用途和处理原因</h2>
+      <ul>
+        <li>运行本游戏、在本地保存进度及记住您的偏好；</li>
+        <li>加载、展示、衡量广告及限制其展示频率；</li>
+        <li>处理订阅、确认权益及恢复购买；</li>
+        <li>诊断错误、维持可靠性、保障服务安全及防止欺诈或滥用；</li>
+        <li>履行法律义务及执行适用条款。</li>
+      </ul>
+      <p>
+        在适用法律要求处理依据的情况下，处理可能基于您的同意（例如某些个性化广告）、
+        履行合同、遵守法律或服务安全、防止欺诈及保障可靠性等合法利益。您可以通过可用
+        的同意设置撤回同意，但这不影响撤回前已经进行的处理。
+      </p>
+
+      <h2>3. 第三方服务及信息共享</h2>
+      <p>
+        信息可能由您的设备直接传输给以下服务商，并由其按照各自的条款及隐私政策处理。
+        实际使用的服务商可能取决于您的平台、地区、设备及广告库存。
+      </p>
+      <div class="service-list">
+        <ul>
+          <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener noreferrer">Unity LevelPlay 与 Unity Ads 隐私政策</a></li>
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 隐私政策（Google Play 与 Google Play 结算服务）</a></li>
+        </ul>
+      </div>
+      <p>
+        我们不会以金钱为对价出售您的个人信息。广告服务商可能为广告、衡量、防止欺诈、
+        安全及合规目的处理或共享标识符和广告互动信息。部分地区的隐私法律可能会将某些
+        个性化广告披露视为“共享”或“定向广告”；在适用时，您可以使用下述选择。
+      </p>
+      <p>
+        在法律要求、保护用户与本游戏，或依法进行业务转让并提供适当通知时，我们也可能
+        披露信息。
+      </p>
+
+      <h2>4. 您的隐私选择和权利</h2>
+      <ul>
+        <li>您可以通过 Android 的隐私或广告设置管理个性化广告，并重置或删除广告标识符；</li>
+        <li>您可以使用本游戏或广告服务商提供的隐私或同意设置；</li>
+        <li>您可以在 Google Play 中管理或取消订阅；</li>
+        <li>您可以通过清除本游戏的应用数据或卸载本游戏删除本地游戏进度。</li>
+        <li>您可以按照<a href="data-deletion.html">数据删除请求</a>页面中的说明，请求删除其他数据。</li>
+      </ul>
+      <p>
+        根据您所在地区，您可能有权访问、更正、删除或限制个人信息，反对或退出某些处理，
+        以及撤回同意。您可以联系我们提出请求。由于本游戏不使用 jcgame 账号或云存档，
+        我们可能无法识别由广告或应用商店服务商持有的数据；此类请求可能需要直接向相应
+        服务商提出。
+      </p>
+
+      <h2>5. 保留与删除</h2>
+      <p>
+        本地游戏数据会保留在您的设备上，直至您清除本游戏的应用数据或将其卸载。对于我们
+        收到的信息，仅会在实现本政策所述目的所合理需要的期限内保留，包括法律、会计、
+        安全及防欺诈需要。第三方服务商按照其各自政策保留和删除数据。您可以联系我们请求
+        删除由我们控制的个人信息，但适用法律允许保留的情形除外。
+      </p>
+
+      <h2>6. 安全和跨境处理</h2>
+      <p>
+        我们与服务商采取合理的技术和组织措施保护信息，包括在支持的情况下加密传输。
+        但任何电子传输或存储方式都无法保证绝对安全。服务商可能在您居住国以外的国家或
+        地区处理信息，并将遵守适用法律要求的保障措施。
+      </p>
+
+      <h2>7. 儿童隐私</h2>
+      <p>
+        本游戏不面向 13 岁以下儿童，亦不面向未达到其所在国家或地区同意处理个人数据最低
+        年龄的儿童。我们不会故意要求儿童提供个人信息。如果您认为儿童通过本游戏提供了
+        个人信息，请联系我们，以便我们采取适当措施。如果本游戏在特定地区向儿童提供，
+        我们将采用当地要求的同意、广告及其他保护措施。
+      </p>
+
+      <h2>8. 本政策的变更</h2>
+      <p>
+        当本游戏、服务商或法律要求发生变化时，我们可能更新本政策。修订后的政策将发布
+        在本页面，并更新页面顶部的日期。法律要求时，我们会通过本游戏或其他适当方式通知
+        重大变更。
+      </p>
+
+      <h2>9. 联系我们</h2>
+      <p>
+        如有隐私相关问题或请求，请发送电子邮件至
+        <a href="mailto:qijiangyuan@gmail.com">qijiangyuan@gmail.com</a>。
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <span>© 2026 jcgame · Infinite Talent: Tower RPG</span>
+    <a class="back-to-top" href="data-deletion.html">Data Deletion</a>
+    <a class="back-to-top" href="#top" aria-label="Back to top">Back to top</a>
+  </footer>
+</body>
+</html>
