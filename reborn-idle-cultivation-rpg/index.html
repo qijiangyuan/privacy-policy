@@ -36,10 +36,10 @@
       <p>Save export creates a JSON file that you control. Save import reads the file you select and replaces progress after confirmation; the Game can also export a backup before import. These operations do not upload saves to us. Exported files are not encrypted by the Game and may reveal your progress or other content in the save. Keep them private unless you choose to share them. Files copied to Downloads, another app, or a cloud drive are handled by that location's provider.</p>
 
       <h3>2. Advertising, consent, and technical information</h3>
-      <p>The Game integrates <strong>Unity LevelPlay / ironSource</strong>, including Ad Quality, with <strong>Google AdMob</strong> and <strong>Unity Ads</strong> for rewarded advertisements. Google <strong>User Messaging Platform (UMP)</strong> manages advertising privacy choices. Available networks and advertisements depend on configuration, region, and service availability.</p>
-      <p>When these services operate, they may receive device or app identifiers, advertising IDs where available, user IDs and certain platform account-related identifiers, IP address and approximate location, device and network characteristics, app and SDK versions, app launches, ad requests and interactions, video completion, diagnostic or performance information, and consent signals. Ad Quality may also process the displayed ad's creative details and impression metrics to monitor ad quality. The data used depends on the service, your device and region, and your privacy choices. It supports ad delivery, measurement, quality checks, security, and fraud prevention, and personalization where permitted.</p>
+      <p>The current Android release integrates <strong>Unity LevelPlay / ironSource</strong>, including Ad Quality, with <strong>Unity Ads</strong> for optional rewarded advertisements. It does not include Google AdMob or Google User Messaging Platform (UMP). Available advertisements depend on configuration, region, and service availability.</p>
+      <p>When these services operate, they may receive device or app identifiers, user IDs and certain platform account-related identifiers, IP address and approximate location, device and network characteristics, app and SDK versions, app launches, ad requests and interactions, video completion, diagnostic or performance information, and privacy signals. Ad Quality may also process displayed ad creative details and impression metrics. The actual data depends on the service, device, region, and privacy settings. This release requests contextual (non-personalized) ads only, sends denial of personalized-ad consent and an opt-out of advertising data sale/sharing to LevelPlay, and removes Android Advertising ID permission. This does not mean that advertising is anonymous or involves no data processing.</p>
       <p>Unity Ads also lists purchase history among the information its SDK collects and shares for advertising and analytics. Its advertising services may therefore process purchase-related information as described in its privacy notices. The Game itself offers no in-app purchases and does not ask for payment-card information.</p>
-      <p>Consent information is requested at startup. After the applicable privacy flow permits ad requests, advertising services can initialize and preload ads before you choose to watch one. Choosing not to watch a rewarded ad therefore does not by itself stop all advertising-related processing. A consent request can itself transmit information needed to determine and record privacy choices.</p>
+      <p>Advertising is off by default. Before enabling it, the Game asks for an age group, without requesting a birth date. The age group and ad-enable choice are stored only on your device, separately from the exported game save. Ad initialization and requests are allowed only for players who select 18 or older and explicitly enable ads. For other age groups, unknown age, or disabled ads, the Game does not initialize LevelPlay or request ads. Once enabled, services can initialize and preload ads in the background, including on later launches, before you choose to watch one.</p>
       <p>Watching a rewarded ad is optional. The Game uses an SDK reward confirmation and a temporary request identifier to apply the selected in-game benefit and prevent duplicate rewards. We do not send the full game save to advertising providers. The current release does not include Firebase Analytics, Firebase Crashlytics, or a separate jcgame gameplay analytics service.</p>
 
       <h3>3. Information you send to support</h3>
@@ -49,15 +49,15 @@
       <p>Advertising and consent data may travel directly to the relevant provider. Providers may act on our behalf for some activities and independently for others, as described in their notices:</p>
       <ul>
         <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener noreferrer">Unity Game Player and App User Privacy Policy</a> — LevelPlay / ironSource, Ad Quality, and Unity Ads.</li>
-        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google's partner-app information</a> — AdMob, UMP, and Google Play distribution services.</li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google's partner-app information</a> — Google Play distribution services; AdMob and UMP are not included in this release.</li>
       </ul>
       <p>We use local data to provide gameplay and save settings, and support information to answer requests. Where a legal basis is required, the relevant processing relies on providing the requested service, consent where required, legitimate interests in support, security and fraud prevention, or legal obligations. Advertising providers explain their own processing grounds in their notices.</p>
-      <p>We may disclose limited information where legally required or necessary to protect users and our services. We do not sell personal information for money. Some uses of advertising identifiers for targeted or cross-context advertising may qualify as a "sale" or "sharing" under local law; applicable consent and opt-out rights still apply.</p>
+      <p>We may disclose limited information where legally required or necessary to protect users and our services. We do not sell personal information for money. This release sends a do-not-sell/share advertising signal to supported networks and does not offer a personalized-ad option. These restrictions do not prevent the technical processing needed to deliver, measure, and secure an enabled contextual ad service.</p>
 
       <h3>5. Your choices and rights</h3>
       <ul>
-        <li>Complete any required advertising privacy form. When UMP requires a privacy-options entry, open the Game's audio/settings panel, then <strong>Privacy &amp; Ads → Ad Privacy Options</strong> to review available choices.</li>
-        <li>Use Android or Google advertising settings to manage personalization or reset or delete your advertising ID, where supported. These controls do not necessarily stop all ad processing.</li>
+        <li>Open the Game’s audio/settings panel, then <strong>Privacy &amp; Ads → Ad Privacy Options</strong>. Eligible adults can enable contextual ads or turn them off. Turning ads off stops new requests and discards cached ads; restart the app to end an already initialized SDK session. It does not delete earlier provider records.</li>
+        <li>This version does not grant personalized-ad consent. Its local ad-enable control is not a TCF consent-management platform or an option to allow targeted advertising.</li>
         <li>Decline optional rewarded ads and continue the core game without their additional rewards.</li>
         <li>Clear local storage or follow our <a href="data-deletion.html">Data Deletion Instructions</a>. Reincarnation is a gameplay feature and does not erase all stored data.</li>
         <li>Contact us to exercise access, correction, deletion, portability, restriction, objection, consent withdrawal, or applicable targeted-advertising opt-out rights. You may also complain to your local data protection authority where available.</li>
@@ -70,10 +70,10 @@
       <p>We use reasonable safeguards for information under our control. No storage or transmission method is completely secure. Providers may process information outside your country and use the transfer safeguards described in their policies where required.</p>
 
       <h3>7. Children and younger users</h3>
-      <p>We do not knowingly collect children's personal information without any parental authorization required by applicable law. The current Game does not ask you to enter a date of birth. A store age rating is not a substitute for consent required by local law. If you are a parent or guardian and believe a child has provided information through the Game or support, contact us so we can investigate and delete information where required.</p>
+      <p>The Game is intended for players aged 13 and above and is not directed to children under 13. Players under 18, or who do not disclose their age group, are not eligible to enable the advertising SDK in this release. The age-group choice is local and is not a birth-date or identity verification service. We do not knowingly collect children’s personal information without any parental authorization required by applicable law. If you are a parent or guardian and believe a child has provided information through the Game or support, contact us so we can investigate and delete information where required.</p>
 
       <h3>8. Permissions and features</h3>
-      <p>The Game uses internet access and network status for online advertising and consent services. Advertising libraries may use Android's advertising identifier and related platform services. The Game does not request precise location, contacts, camera, microphone, SMS, or call-log access. Selecting a save file does not give us access to all files on your device.</p>
+      <p>The Game uses internet access and network status for online advertising. This release removes Android Advertising ID permission and asks LevelPlay to opt out of device-ID access. Providers may still process other app/device and technical information described above. The Game does not request precise location, contacts, camera, microphone, SMS, or call-log access. Selecting a save file does not give us access to all files on your device.</p>
       <p>The current release has no game-account registration, social login, Google Play Games sign-in, cloud saves, purchases, subscriptions, or payment-card collection. If these features change, we will update the Policy and provide any required notice or choices.</p>
 
       <h3>9. This website and updates</h3>
@@ -92,10 +92,10 @@
       <p>导出存档会创建由您控制的 JSON 文件。导入功能读取您选中的文件，经确认后覆盖进度；导入前也可以导出备份。这些操作不会将存档上传给我们。导出文件未经游戏加密，可能显示您的进度及存档中的其他内容，请妥善保管，自行决定是否分享。复制到“下载”、其他应用或云盘的文件，由对应位置的服务商处理。</p>
 
       <h3>2. 广告、隐私同意和技术信息</h3>
-      <p>本游戏集成 <strong>Unity LevelPlay／ironSource</strong>（包括 Ad Quality），通过 <strong>Google AdMob</strong> 和 <strong>Unity Ads</strong> 提供激励广告，并使用 Google <strong>User Messaging Platform（UMP）</strong>管理广告隐私选择。可用广告网络及广告取决于配置、地区和服务可用性。</p>
-      <p>这些服务运行时，可能接收设备或应用标识符、可用的广告 ID、用户 ID 及某些平台账号相关标识符、IP 地址及大致位置、设备和网络特征、应用及 SDK 版本、应用启动、广告请求和互动、视频完成情况、诊断或性能信息，以及隐私同意信号。Ad Quality 还可能处理所展示广告的素材详情和展示指标，以监测广告质量。实际使用的信息取决于服务、设备、地区及您的隐私选择，用于广告投放、衡量、质量检查、安全和防止欺诈，并在允许时用于个性化广告。</p>
+      <p>当前 Android 版本集成 <strong>Unity LevelPlay／ironSource</strong>（包括 Ad Quality），通过 <strong>Unity Ads</strong> 提供可选激励广告。本版本不包含 Google AdMob 或 Google User Messaging Platform（UMP）。可用广告取决于配置、地区和服务可用性。</p>
+      <p>这些服务运行时，可能接收设备或应用标识符、用户 ID 及某些平台账号相关标识符、IP 地址及大致位置、设备和网络特征、应用及 SDK 版本、应用启动、广告请求和互动、视频完成情况、诊断或性能信息，以及隐私信号。Ad Quality 还可能处理所展示广告的素材详情和展示指标。实际信息取决于服务、设备、地区及隐私设置。本版本仅请求情境型（非个性化）广告，向 LevelPlay 传递拒绝个性化广告同意及退出用于广告的数据出售或共享的信号，并移除 Android 广告标识符权限。这不代表广告服务是匿名的，也不代表不处理任何数据。</p>
       <p>Unity Ads 还在其 SDK 披露中将购买记录列为收集和共享的信息，用于广告及分析。因此，其广告服务可能按照自身隐私声明处理购买相关信息。本游戏本身不提供内购，也不要求输入银行卡信息。</p>
-      <p>游戏启动时会请求隐私同意信息。在适用的隐私流程允许请求广告后，广告服务可在您选择观看之前初始化并预加载广告。因此，不观看激励广告本身并不代表停止所有广告相关处理。隐私同意请求本身也可能传输用于确定并记录隐私选择的必要信息。</p>
+      <p>广告默认关闭。开启前，游戏会询问年龄范围，不要求出生日期。年龄范围和广告开关仅保存在本机，不包含在导出的游戏存档中。只有选择“18 岁及以上”并主动开启广告的玩家，才允许初始化 LevelPlay 和请求广告。其他年龄范围、未知年龄或关闭广告时，游戏不初始化 LevelPlay，也不请求广告。开启后，服务可在选择观看之前在后台初始化并预加载，包括在后续启动应用时。</p>
       <p>观看激励广告由您自行选择。游戏根据 SDK 奖励确认及临时请求编号发放所选游戏奖励，并防止重复发奖。我们不会向广告服务商发送完整游戏存档。当前版本不包含 Firebase Analytics、Firebase Crashlytics，也没有独立的 jcgame 游戏行为分析服务。</p>
 
       <h3>3. 您主动发送给客服的信息</h3>
@@ -105,15 +105,15 @@
       <p>广告及隐私同意数据可能直接传输给相关服务商。对于部分处理活动，服务商可能代表我们处理信息；对于其他活动则可能独立处理，具体请参阅其政策：</p>
       <ul>
         <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener noreferrer">Unity 游戏玩家和应用用户隐私政策</a>：LevelPlay／ironSource、Ad Quality 和 Unity Ads。</li>
-        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 隐私权政策</a>及<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">合作应用信息说明</a>：AdMob、UMP 及 Google Play 分发服务。</li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 隐私权政策</a>及<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">合作应用信息说明</a>：Google Play 分发服务；本版本不包含 AdMob 和 UMP。</li>
       </ul>
       <p>我们使用本地数据提供游戏功能和保存设置，使用客服信息回复请求。在法律要求说明处理依据的地区，相应处理基于提供您请求的服务、依法取得的同意、客服支持及安全和防欺诈方面的合法利益，或履行法律义务。广告服务商在其政策中说明自身的处理依据。</p>
-      <p>在法律要求或为保护用户及服务所必需时，我们可能披露有限信息。我们不会以金钱为对价出售个人信息。利用广告标识符进行定向或跨情境广告的某些行为，在部分法律下可能属于“出售”或“共享”，并适用相应的同意及退出权。</p>
+      <p>在法律要求或为保护用户及服务所必需时，我们可能披露有限信息。我们不会以金钱为对价出售个人信息。本版本向支持的广告网络传递“禁止出售或共享”广告数据的信号，不提供开启个性化广告的选项。这些限制不妨碍已开启的情境广告服务进行投放、衡量和安全所需的技术处理。</p>
 
       <h3>5. 您的选择和权利</h3>
       <ul>
-        <li>完成必要的广告隐私表单。当 UMP 要求提供隐私选项入口时，可打开游戏音律／设置面板，在<strong>隐私与广告 → 广告隐私选项</strong>中查看可用选择。</li>
-        <li>在设备支持时，通过 Android 或 Google 广告设置管理个性化广告，或重置、删除广告 ID。这些设置不一定停止所有广告处理。</li>
+        <li>打开游戏音律／设置面板，进入<strong>隐私与广告 → 广告隐私选项</strong>。符合年龄条件的成年玩家可以开启情境广告或关闭广告。关闭会停止新请求并丢弃已缓存广告；请重启应用，以结束已初始化的 SDK 会话。关闭不会删除服务商此前保存的记录。</li>
+        <li>本版本不授予个性化广告同意。本机广告开关不是 TCF 隐私同意管理平台，也不提供允许定向广告的选项。</li>
         <li>不观看可选激励广告，继续体验基础游戏内容；相应的额外广告奖励不会发放。</li>
         <li>清除本地存储，或按照<a href="data-deletion.html#chinese">数据删除说明</a>操作。轮回属于游戏玩法，不会清除全部已存储数据。</li>
         <li>联系我们行使访问、更正、删除、可携带、限制或反对处理、撤回同意，以及适用的定向广告退出权。在适用时，您也可以向当地数据保护机构投诉。</li>
@@ -126,10 +126,10 @@
       <p>我们采取合理措施保护由我们控制的信息，但任何存储或传输方式均无法保证绝对安全。服务商可能在您所在国家以外处理信息，并在法律要求时采用其政策中说明的跨境保障措施。</p>
 
       <h3>7. 儿童和未成年用户</h3>
-      <p>我们不会在缺少适用法律要求的监护人授权时，明知而收集儿童个人信息。当前游戏不会要求输入出生日期。应用商店年龄分级不能代替当地法律要求的隐私同意。如果您是家长或监护人，认为儿童通过游戏或客服提供了信息，请联系我们，以便调查并依法删除。</p>
+      <p>本游戏面向 13 岁及以上玩家，不以未满 13 岁儿童为目标用户。本版本未满 18 岁或不透露年龄范围的玩家无法开启广告 SDK。年龄范围仅保存在本机，不属于出生日期或身份验证。我们不会在缺少适用法律要求的监护人授权时，明知而收集儿童个人信息。如果您是家长或监护人，认为儿童通过游戏或客服提供了信息，请联系我们，以便调查并依法删除。</p>
 
       <h3>8. 权限和功能范围</h3>
-      <p>游戏使用联网及网络状态权限提供在线广告和隐私同意服务。广告程序库可能使用 Android 广告标识符及相关平台服务。游戏不请求精确位置、联系人、相机、麦克风、短信或通话记录访问权限。选择一个存档文件不会使我们获得您设备上全部文件的访问权。</p>
+      <p>游戏使用联网及网络状态权限提供在线广告服务。本版本移除 Android 广告标识符权限，并要求 LevelPlay 退出设备 ID 访问；服务商仍可能处理前述其他应用、设备和技术信息。游戏不请求精确位置、联系人、相机、麦克风、短信或通话记录访问权限。选择一个存档文件不会使我们获得您设备上全部文件的访问权。</p>
       <p>当前版本不提供游戏账号注册、社交登录、Google Play Games 登录、云存档、内购、订阅或银行卡信息收集。若这些功能发生变化，我们会更新政策，并依法提供必要提示或选择。</p>
 
       <h3>9. 本网站及政策更新</h3>

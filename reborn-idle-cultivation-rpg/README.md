@@ -1,44 +1,38 @@
 # Reborn: Idle Cultivation RPG 隐私页面
 
-- 应用包名：`com.jcgame.feilinggen.global`
+- 包名：`com.jcgame.feilinggen.global`
 - 中文名：开局废灵根，我无敌了
-- 英文名：Reborn: Idle Cultivation RPG
-- 开发者展示名及联系邮箱沿用同仓库政策：jcgame / qijiangyuan@gmail.com
-- 政策目录：`reborn-idle-cultivation-rpg/`；正文在 `index.html`，`privacy-policy.html` 为兼容入口。
-- 数据删除页：`data-deletion.html`；独立的 `legal.css` 无远程资源或脚本。
+- 开发者：jcgame，邮箱：qijiangyuan@gmail.com
+- 更新日期：2026-09-12；游戏受众由用户确认为 13+。
+- 隐私政策：https://qijiangyuan.github.io/privacy-policy/reborn-idle-cultivation-rpg/
+- 数据删除：https://qijiangyuan.github.io/privacy-policy/reborn-idle-cultivation-rpg/data-deletion.html
 
-GitHub Pages 地址：
+## 当前正式包依据
 
-- 隐私政策：`https://qijiangyuan.github.io/privacy-policy/reborn-idle-cultivation-rpg/`
-- 数据删除：`https://qijiangyuan.github.io/privacy-policy/reborn-idle-cultivation-rpg/data-deletion.html`
+核对 Feilinggen 的存档服务、原生广告桥、最终依赖和 Manifest。
 
-## 写作依据（2026-09-12）
-
-核对了 `Feilinggen` 的保存服务、导入导出界面、广告桥、Android Manifest 和 Gradle 依赖。
-
-| 项目 | 本次写作依据 |
+| 项目 | 当前行为 |
 | --- | --- |
-| 存档 | 本地 IndexedDB / localStorage；JSON 导入导出及导入前备份；无游戏后端 |
-| 奖励广告 | LevelPlay 9.5.0，AdMob Adapter 5.13.0 / Google Next-Gen 1.3.1，Unity Ads Adapter 5.12.0 / SDK 4.20.0 |
-| 其他广告组件 | LevelPlay 间接依赖 Ad Quality 9.9.0 |
-| 隐私同意 | UMP 4.0.0；允许请求后初始化和预加载；需要时提供隐私选项入口 |
-| 不包含 | Firebase Analytics / Crashlytics、Google Play Games 登录、内购、订阅、云存档、AppLovin |
-| 删除 | Android 清除存储；导出文件单独删除；客服及第三方记录另外申请 |
+| 本地存档 | IndexedDB / localStorage；JSON 手动导入导出，无游戏后端 |
+| 广告组件 | LevelPlay 9.5.0、Unity Ads Adapter 5.12.0 / SDK 4.20.0、Ad Quality 9.9.0 |
+| 本次移除 | AdMob Adapter、Google Mobile Ads SDK、Google UMP；后续接入需重新配置 CMP 并更新政策 |
+| 广告选择 | 默认关闭；本机年龄范围为 18+ 且主动开启后，才初始化并预加载；未成年和未知年龄不初始化 LevelPlay |
+| 非个性化模式 | LevelPlay GDPR consent=false、CCPA opt-out=true；移除 AD_ID 和 Topics 权限，device-ID opt-out=true |
+| 关闭广告 | 丢弃缓存并停止新请求；重启结束已初始化 SDK 会话，不删除第三方历史记录 |
+| 年龄和开关 | 只保存在 Android 本机 SharedPreferences，不进入导出存档；不收集出生日期 |
+| 不包含 | Firebase Analytics / Crashlytics、登录、内购、订阅、云存档、AppLovin |
 
-儿童段落没有推定用户尚未确认的目标年龄，也没有把商店评级当作数据处理同意。发布应用前仍需确认目标年龄，并使 Play、广告后台和原生年龄配置一致。不得仅因完成政策而把 `audienceConfirmed` 改为 true。
+本地广告开关不是 TCF CMP，不授予个性化广告同意。没有把拒绝个性化同意解释为“零数据收集”。Unity Ads 官方披露包含用户 ID、购买记录、设备标识、广告互动、位置及诊断等类型；即使没有游戏账号和内购，也不能直接排除广告 SDK 的披露项。最终 Play 申报应按实际 SDK 和后台配置核实。
 
-Unity Ads Android 4.20.0 的官方数据安全表还将个人标识符（Play 表中的用户 ID）和购买记录列为收集及共享；正文已纳入这些 SDK 数据类型。游戏没有注册或内购功能，不能据此直接排除广告 SDK 的披露项。其官方表将应用使用时长采集与后台 Acquire Optimization 设置关联；LevelPlay 自身则将广告互动列为“其他操作”，申报需合并所有实际使用的 SDK。
-
-推送到 `main` 后由仓库的 GitHub Pages 配置发布。发布或更新后，应匿名访问上述两个地址，确认返回成功且内容与本次提交一致，再用于 Google Play 或本应用 `android/release.properties` 的 `privacyPolicyUrl`。政策发布不代表应用广告配置已完成；AdMob App ID、受众配置、后台实例、隐私消息和真机行为需另行验收。
+网站没有跟踪脚本、分析工具或远程字体。中英文同步更新；只提交本游戏目录，保留仓库其他游戏的改动。推送后匿名访问两页确认 HTTP 200 和内容一致，再用于 Play。
 
 ## 官方参考
 
-- [Google Next-Gen SDK 数据披露](https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure?hl=en)
-- [Unity Ads Android 4.20.0 数据安全披露](https://docs.unity.com/en-us/ads-android/4.20.0/privacy/developer-consent/disclosures/google-data-safety)
-- [LevelPlay 数据安全披露](https://docs.unity.com/en-us/grow/is-ads/legal-resources/google-data-safety-questionnaire)
+- [Unity Ads 4.20.0 数据披露](https://docs.unity.com/en-us/ads-android/4.20.0/privacy/developer-consent/disclosures/google-data-safety)
+- [LevelPlay 数据披露](https://docs.unity.com/en-us/grow/is-ads/legal-resources/google-data-safety-questionnaire)
+- [LevelPlay 隐私 API](https://docs.unity.com/en-us/grow/levelplay/sdk/android/regulation-advanced-settings)
+- [Unity Ads 同意信号与情境广告](https://docs.unity.com/en-us/ads-android/4.20.0/privacy/developer-consent/consent/consent-communication)
 - [Unity 玩家隐私政策](https://unity.com/legal/game-player-and-app-user-privacy-policy)
-- [Google 隐私政策](https://policies.google.com/privacy)
 - [Play 用户数据政策](https://support.google.com/googleplay/android-developer/answer/10144311?hl=en)
-- [GitHub 隐私声明](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)
 
-中英文应一起更新，尤其是广告网络、年龄处理、数据用途与保存期限。不要直接复制其他游戏的支付、登录、分析工具或已实现隐私开关描述。
+SDK 实际网络行为及广告后台仍需正式测试验收，政策发布本身不证明广告可展示。
