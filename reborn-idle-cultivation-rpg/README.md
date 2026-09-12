@@ -27,11 +27,15 @@ GitHub Pages 地址：
 
 儿童段落没有推定用户尚未确认的目标年龄，也没有把商店评级当作数据处理同意。发布应用前仍需确认目标年龄，并使 Play、广告后台和原生年龄配置一致。不得仅因完成政策而把 `audienceConfirmed` 改为 true。
 
+Unity Ads Android 4.20.0 的官方数据安全表还将个人标识符（Play 表中的用户 ID）和购买记录列为收集及共享；正文已纳入这些 SDK 数据类型。游戏没有注册或内购功能，不能据此直接排除广告 SDK 的披露项。其官方表将应用使用时长采集与后台 Acquire Optimization 设置关联；LevelPlay 自身则将广告互动列为“其他操作”，申报需合并所有实际使用的 SDK。
+
 推送到 `main` 后由仓库的 GitHub Pages 配置发布。发布或更新后，应匿名访问上述两个地址，确认返回成功且内容与本次提交一致，再用于 Google Play 或本应用 `android/release.properties` 的 `privacyPolicyUrl`。政策发布不代表应用广告配置已完成；AdMob App ID、受众配置、后台实例、隐私消息和真机行为需另行验收。
 
 ## 官方参考
 
 - [Google Next-Gen SDK 数据披露](https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure?hl=en)
+- [Unity Ads Android 4.20.0 数据安全披露](https://docs.unity.com/en-us/ads-android/4.20.0/privacy/developer-consent/disclosures/google-data-safety)
+- [LevelPlay 数据安全披露](https://docs.unity.com/en-us/grow/is-ads/legal-resources/google-data-safety-questionnaire)
 - [Unity 玩家隐私政策](https://unity.com/legal/game-player-and-app-user-privacy-policy)
 - [Google 隐私政策](https://policies.google.com/privacy)
 - [Play 用户数据政策](https://support.google.com/googleplay/android-developer/answer/10144311?hl=en)
