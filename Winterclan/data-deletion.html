@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src https://winterclan-api.whjcxgame.cn; base-uri 'none'; form-action 'none'">
   <meta name="description" content="Data deletion instructions for Winterclan: Hex Tactics">
   <link rel="canonical" href="https://qijiangyuan.github.io/privacy-policy/Winterclan/data-deletion.html">
   <title>Winterclan: Hex Tactics — Data Deletion</title>
@@ -24,6 +26,9 @@
     .warning { border-left:3px solid var(--warn); padding-left:15px; color:#ffe7b4; }
     .zh { border-top:1px dashed var(--line); margin-top:26px; padding-top:25px; }
     footer { padding:18px 0 50px; text-align:center; color:var(--muted); font-size:.88rem; }
+    input, button { font:inherit; border:1px solid var(--line); border-radius:9px; padding:12px; color:var(--text); background:var(--soft); max-width:100%; }
+    input { width:100%; margin:10px 0; } button { cursor:pointer; margin:5px 8px 5px 0; } button:disabled { opacity:.5; cursor:wait; }
+    #request-result { white-space:pre-line; overflow-wrap:anywhere; }
   </style>
 </head>
 <body>
@@ -34,55 +39,64 @@
   </header>
 
   <main>
-    <section lang="en">
-      <h2>How to request deletion</h2>
-      <p>These instructions apply to the Android game <strong>Winterclan: Hex Tactics</strong> (package <code>com.jcgame.winterclan.global</code>).</p>
-      <ol>
-        <li>Email <a href="mailto:qijiangyuan@gmail.com?subject=Winterclan%20Data%20Deletion%20Request">qijiangyuan@gmail.com</a> with the subject <strong>Winterclan Data Deletion Request</strong>.</li>
-        <li>Include your in-game Player ID, selected server, and—if available—your Google Play Games player name or player ID. Tell us whether you want the entire account deleted or only specific information.</li>
-        <li>We will acknowledge the request, verify account ownership where reasonably necessary, and complete the request within the period required by applicable law.</li>
-      </ol>
-      <div class="action"><strong>Quick action:</strong> <a href="mailto:qijiangyuan@gmail.com?subject=Winterclan%20Data%20Deletion%20Request&amp;body=Game%3A%20Winterclan%3A%20Hex%20Tactics%0APlayer%20ID%3A%20%0AServer%3A%20%0AGoogle%20Play%20Games%20player%20name%20or%20ID%20(optional)%3A%20%0ARequest%3A%20Delete%20my%20account%20and%20associated%20data.">Open a pre-filled email</a></div>
-      <p class="warning"><strong>Do not email</strong> your password, Google authorization code, purchase token, full payment-card details, or government ID. If additional verification is needed, we will explain a safer method.</p>
-
-      <h3>Information deleted</h3>
-      <p>After verification, deletion of the entire account removes or irreversibly de-identifies the jcgame account binding, player profile, gameplay progress, heroes, inventory, virtual items and currency, mail, event records, and other server-side gameplay data associated with the account. This action is permanent and cannot be undone.</p>
-      <p>You can remove local data separately through Android Settings → Apps → Winterclan: Hex Tactics → Storage → Clear data, or by uninstalling the Game.</p>
-
-      <h3>Information that may be retained</h3>
-      <p>We may retain limited purchase, accounting, security, fraud-prevention, dispute, or legal records when required by law or reasonably necessary to protect the service. Retained data will be limited, access-restricted, and used only for those purposes. Aggregated or de-identified information that cannot reasonably identify you may also be retained.</p>
-
-      <h3>Third-party information</h3>
-      <p>Deleting your jcgame account does not automatically delete data independently controlled by Google Play Games, Google Play, or Unity. Manage your Google account at <a href="https://myaccount.google.com/">Google Account</a> and see the applicable provider's privacy controls for those records.</p>
-
-      <p><a href="index.html">← Return to the Privacy Policy</a></p>
+    <section id="request-status">
+      <h2>Request status · 删除申请进度</h2>
+      <p>Open the private status link provided by the game, or paste it below. Keep the link private. This checks an existing request; it does not submit a deletion request.</p>
+      <p>打开游戏提供的私密进度链接，或将其粘贴到下方。请勿公开此链接。这里用于查询已有申请，不会创建删除申请。</p>
+      <label for="status-link">Private status link / 私密进度链接</label>
+      <input id="status-link" type="url" autocomplete="off" spellcheck="false" placeholder="Paste the link from the game / 粘贴游戏提供的链接">
+      <button id="check-status" type="button">Check status / 查询进度</button>
+      <button id="copy-status" type="button">Copy private link / 复制私密链接</button>
+      <p id="request-result" role="status" aria-live="polite">No request loaded. / 尚未加载申请。</p>
     </section>
-
-    <section class="zh" lang="zh-CN">
-      <h2>如何申请删除数据</h2>
-      <p>本说明适用于 Android 游戏 <strong>Winterclan: Hex Tactics</strong>（包名：<code>com.jcgame.winterclan.global</code>）。</p>
+    <section lang="en">
+      <h2>Delete your Winterclan account</h2>
+      <p>These instructions cover <strong>Winterclan: Hex Tactics</strong> on <strong>Android and iOS</strong> (package / Bundle ID: <code>com.jcgame.winterclan.global</code>), including Google and Sign in with Apple accounts.</p>
+      <h3>In the game — no email required</h3>
       <ol>
-        <li>发送邮件至 <a href="mailto:qijiangyuan@gmail.com?subject=Winterclan%20Data%20Deletion%20Request">qijiangyuan@gmail.com</a>，邮件主题填写 <strong>Winterclan Data Deletion Request</strong>。</li>
-        <li>请提供游戏内玩家 ID、所选服务器，以及（如有）Google Play Games 玩家名称或玩家 ID，并说明希望删除整个账户还是特定信息。</li>
-        <li>我们会确认收到请求，在合理必要时验证账户归属，并在适用法律要求的期限内完成处理。</li>
+        <li>Sign in to the game account you want to delete. Open <strong>Settings → Delete account / request status</strong>.</li>
+        <li>Read the permanent-deletion notice, type <strong>DELETE</strong>, then tap <strong>Submit deletion request</strong>. The game securely identifies your signed-in account; you do not need to send a password or contact support.</li>
+        <li>Save the request number and private link shown under <strong>View status</strong>. We process requests manually <strong>within 30 days</strong>. The status page shows <strong>Pending</strong> until data removal has been checked, then <strong>Completed</strong> with the completion date. Submitting a request is not immediate deletion.</li>
       </ol>
-      <div class="action"><strong>快捷操作：</strong><a href="mailto:qijiangyuan@gmail.com?subject=Winterclan%20Data%20Deletion%20Request&amp;body=Game%3A%20Winterclan%3A%20Hex%20Tactics%0APlayer%20ID%3A%20%0AServer%3A%20%0AGoogle%20Play%20Games%20player%20name%20or%20ID%20(optional)%3A%20%0ARequest%3A%20Delete%20my%20account%20and%20associated%20data.">打开预填邮件</a></div>
-      <p class="warning"><strong>请勿通过邮件发送</strong>密码、Google 授权码、购买令牌、完整银行卡信息或政府身份证件。如需进一步验证，我们会说明更安全的方式。</p>
-
-      <h3>将被删除的信息</h3>
-      <p>验证通过后，删除整个账户会删除或不可逆地去标识化与该账户关联的 jcgame 账户绑定、玩家资料、游戏进度、英雄、背包、虚拟物品与货币、邮件、活动记录及其他服务器端游戏数据。此操作不可撤销，数据无法恢复。</p>
-      <p>您还可以通过 Android 设置 → 应用 → Winterclan: Hex Tactics → 存储 → 清除数据，或卸载游戏来移除本地数据。</p>
-
-      <h3>可能保留的信息</h3>
-      <p>法律要求或为保护服务而合理必要时，我们可能保留有限的购买、会计、安全、反欺诈、争议或法律记录。保留的数据将受到访问限制，并仅用于上述目的。无法合理识别您的汇总或去标识化信息也可能继续保留。</p>
-
-      <h3>第三方信息</h3>
-      <p>删除 jcgame 账户不会自动删除由 Google Play Games、Google Play 或 Unity 独立控制的数据。您可以前往 <a href="https://myaccount.google.com/">Google 账户</a>管理 Google 数据，并使用相应服务商提供的隐私控制功能。</p>
-
-      <p><a href="index.html">← 返回隐私政策</a></p>
+      <p>This entry is included in app versions with the account-deletion update. If your installed version does not yet show it, update when that version is available. The external request option below remains available.</p>
+      <p class="warning">Deletion permanently removes this game account and all its associated roles on our shared Android/iOS servers, including progress and unused virtual currency. Separately registered, unlinked Apple and Google accounts are separate accounts and require separate requests. Deletion cannot be undone and does not automatically refund purchases.</p>
+      <h3>If you cannot access the game</h3>
+      <p>Email <a href="mailto:qijiangyuan@gmail.com?subject=Winterclan%20Data%20Deletion%20Request">qijiangyuan@gmail.com</a> with the subject <strong>Winterclan Data Deletion Request</strong>. Provide your Player ID or character name, server, and sign-in method (Apple or Google). We will verify ownership as needed and explain any additional information required. You may also use this route for deletion of specific information. This is an alternative for users without game access, not a required step after an in-game request.</p>
+      <p class="warning">Never send passwords, Apple/Google identity tokens or authorization codes, purchase receipts/tokens, full payment-card details, or government ID by email.</p>
+      <h3>Information deleted and retained</h3>
+      <p>We delete or irreversibly de-identify account bindings, player profiles, gameplay progress, heroes, inventory, virtual items and currency, mail, events, activity records and associated server-side gameplay data. We also address references in shared gameplay records and applicable analytics data. Uninstalling the game alone does not delete this server data.</p>
+      <p>Limited purchase/accounting, security, fraud-prevention, dispute and legal records may be retained where required by law or reasonably necessary for those purposes, with restricted access. Backup and operational-log copies are handled under the deletion process and retention schedule; deleted data must not be restored to active use. The minimal completion receipt is retained for <strong>180 days after completion</strong>, then expires. Non-identifying aggregate statistics may remain.</p>
+      <h3>Sign in with Apple</h3>
+      <p>For existing Apple accounts where we do not hold a revocable Apple access/refresh token, also open <strong>iPhone Settings → your name → Sign in with Apple → Winterclan → Delete / Stop Using</strong>. Labels may differ by iOS version. See <a href="https://support.apple.com/en-us/102571" rel="noreferrer">Apple’s official instructions</a>. You can do this after submitting your game deletion request and saving the status link. Stopping Apple sign-in does not itself delete your game account; submitting the game deletion request is still necessary. We do not make completion of your game-data deletion depend on this manual Apple step.</p>
+      <h3>Local and third-party data</h3>
+      <p>Android: clear the game's storage in system settings, or uninstall. iOS: delete the app through iPhone Storage (offloading may retain data). This does not replace a server-side deletion request. Deleting a game account does not delete your Apple Account, Google Account, or records independently held by Apple, Google or Unity. Use their respective privacy controls.</p>
+      <p><a href="index.html">← Privacy Policy</a></p>
+    </section>
+    <section class="zh" lang="zh-CN">
+      <h2>删除 Winterclan 游戏账号</h2>
+      <p>本说明同时适用于 <strong>Winterclan: Hex Tactics 的 Android 和 iOS 版本</strong>（包名 / Bundle ID：<code>com.jcgame.winterclan.global</code>），覆盖 Google 登录和通过 Apple 登录的账号。</p>
+      <h3>游戏内申请，无需发送邮件</h3>
+      <ol>
+        <li>登录需要删除的游戏账号，打开<strong>设置 → 删除账号 / 申请进度</strong>。</li>
+        <li>阅读永久删除提示，输入 <strong>DELETE</strong>，点击<strong>提交删除申请</strong>。游戏会验证当前登录账号，无需提交密码或联系客服。</li>
+        <li>保存申请编号和<strong>查看进度</strong>中的私密链接。申请由人工在 <strong>30 天内</strong>处理；实际清理并核验前显示<strong>待处理</strong>，完成后显示<strong>已完成</strong>及完成日期。提交申请不代表立即删除。</li>
+      </ol>
+      <p>该入口随账号删除功能更新提供。如果已安装版本尚未显示，请在相应更新上架后更新游戏；以下游戏外申请方式仍可使用。</p>
+      <p class="warning">删除范围是当前游戏账号及其在 Android / iOS 共用服务器上的全部关联角色，包含进度和未使用的虚拟货币。分别注册且未关联的 Apple 与 Google 账号属于不同账号，需要分别申请。删除不可恢复，也不会自动退款。</p>
+      <h3>无法进入游戏时</h3>
+      <p>可发送邮件至 <a href="mailto:qijiangyuan@gmail.com?subject=Winterclan%20Data%20Deletion%20Request">qijiangyuan@gmail.com</a>，主题为 <strong>Winterclan Data Deletion Request</strong>，提供玩家 ID 或角色名、服务器及登录方式（Apple 或 Google）。我们将在必要时验证归属并说明需要补充的信息。也可通过此方式申请删除特定信息。这是无法进入游戏时的替代方式，游戏内提交后无需再发邮件。</p>
+      <p class="warning">请勿通过邮件发送密码、Apple / Google 身份令牌或授权码、购买收据或令牌、完整银行卡信息、政府身份证件。</p>
+      <h3>删除和保留范围</h3>
+      <p>我们会删除或不可逆地去标识化账号绑定、玩家资料、进度、英雄、背包、虚拟物品与货币、邮件、活动记录及相关服务器游戏数据，并处理共享游戏记录中的关联信息及适用的分析数据。仅卸载游戏不会删除这些服务器数据。</p>
+      <p>法律要求或确有必要时，有限的交易、会计、安全、反欺诈、争议及法律记录可能继续保留，并受到访问限制。备份和运行日志按删除流程及保留计划处理，已删除数据不得恢复为活跃数据。最小化的完成回执在<strong>处理完成后保留 180 天</strong>，到期删除。无法识别个人的汇总统计可能继续保留。</p>
+      <h3>通过 Apple 登录</h3>
+      <p>对于未留存可撤销的 Apple 访问 / 刷新令牌的历史账号，请在提交游戏删除申请并保存进度链接后，前往<strong>iPhone 设置 → 您的姓名 → 通过 Apple 登录 → Winterclan → 删除 / 停止使用</strong>。不同 iOS 版本文案可能不同，可查看 <a href="https://support.apple.com/en-us/102571" rel="noreferrer">Apple 官方说明</a>。停止 Apple 登录不会自动删除游戏账号，仍需提交游戏删除申请；我们不会以您是否完成此手动操作作为删除游戏数据的前提。</p>
+      <h3>本地和第三方数据</h3>
+      <p>Android 可在系统设置中清除应用存储或卸载游戏；iOS 可在 iPhone 储存空间中删除 App（仅卸载保留文稿的操作可能保留数据）。这些操作不能代替服务器端删除申请。删除游戏账号不会删除您的 Apple 账户、Google 账户或 Apple、Google、Unity 独立持有的数据，请使用相应服务商的隐私设置。</p>
+      <p><a href="index.html">← 隐私政策</a></p>
     </section>
   </main>
-
-  <footer>Effective August 18, 2026 · 2026 年 8 月 18 日生效</footer>
+  <footer>Updated September 21, 2026 · 2026 年 9 月 21 日更新</footer>
+  <script src="data-deletion.js" defer></script>
 </body>
 </html>
