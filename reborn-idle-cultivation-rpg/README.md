@@ -3,7 +3,7 @@
 - 包名：`com.jcgame.feilinggen.global`
 - 中文名：开局废灵根，我无敌了
 - 开发者：jcgame，邮箱：qijiangyuan@gmail.com
-- 更新日期：2026-09-12；游戏受众由用户确认为 13+。
+- 更新日期：2026-10-11；游戏受众由用户确认为 13+。
 - 隐私政策：https://qijiangyuan.github.io/privacy-policy/reborn-idle-cultivation-rpg/
 - 数据删除：https://qijiangyuan.github.io/privacy-policy/reborn-idle-cultivation-rpg/data-deletion.html
 
@@ -20,7 +20,9 @@
 | 广告 ID | 声明 AD_ID，允许合适流量使用；保留用户删除 ID、隐私拒绝和年龄限制；仍移除 Topics |
 | 授权变化 | UMP 要求时显示隐私选项；传递 TCF / Additional Consent 及美国 GPP 退出信号；无必要设备存储同意时不初始化 LevelPlay |
 | 年龄和选择 | 年龄范围只保存在本机，不进入导出存档；不收集出生日期；服务商接收年龄处理标记和隐私信号 |
-| 不包含 | Firebase Analytics / Crashlytics、登录、内购、订阅、云存档、AppLovin |
+| 分析 | code 3 起集成 Firebase Analytics；未知年龄/未满 16 岁关闭，按 UMP 和本地选择采集 |
+| 订阅 | code 4 起 Google Play Billing 9.1.0 月/年免广告会员；查询并恢复权益，付款由 Play 处理 |
+| 不包含 | Crashlytics、游戏登录、云存档、AppLovin |
 
 当前 versionCode 2 配置为 UMP 聚合隐私流程。不得把 canRequestAds 等同于全部广告伙伴获准个性化，也不能把拒绝个性化同意解释为零数据收集。AdMob 与 LevelPlay 后台仍需发布匹配的消息及网络实例。Unity Ads 官方披露包含用户 ID、购买记录、设备标识、广告互动、位置及诊断等类型；即使没有游戏账号和内购，也不能直接排除广告 SDK 的披露项。最终 Play 申报应按实际 SDK 和后台配置核实。
 
@@ -39,3 +41,5 @@ SDK 实际网络行为及广告后台仍需正式测试验收，政策发布本�
 
 - [Google Next-Gen 数据披露](https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure)
 - [Google UMP](https://developers.google.com/admob/android/next-gen/privacy)
+
+2026-10-11：同步 Firebase 分析、购买分析、月/年订阅及数据删除与取消订阅的区别。仅修改本游戏目录。
